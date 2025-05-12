@@ -912,6 +912,9 @@
                 $(".banner").fadeIn();
 
                 document.querySelectorAll(".nav-item").forEach(b => b.classList.remove("active"));
+
+                $("#selectSection").val("home");
+
             });
 
             document.getElementById("scheduleBtn").addEventListener("click", function () {
@@ -923,6 +926,8 @@
                 $("#contact").hide();
 
                 $(".banner").hide()
+
+                $("#selectSection").val("schedule");
             });
 
             document.getElementById("workshopBtn").addEventListener("click", function () {
@@ -933,6 +938,8 @@
                 $("#contact").hide();
 
                 $(".banner").hide()
+
+                $("#selectSection").val("workshop");
             });
 
             document.getElementById("programBtn").addEventListener("click", function () {
@@ -944,6 +951,8 @@
                 $("#contact").hide();
 
                 $(".banner").hide()
+
+                $("#selectSection").val("program");
             });
 
 
@@ -956,6 +965,8 @@
                 $("#contact").hide();
 
                 $(".banner").hide()
+
+                $("#selectSection").val("challenge");
             });
 
 
@@ -969,6 +980,8 @@
                 $("#contact").fadeIn();
 
                 $(".banner").hide()
+
+                $("#selectSection").val("contact");
             });
 
             $("#homeBtn").click()
