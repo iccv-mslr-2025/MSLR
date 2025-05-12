@@ -67,11 +67,32 @@
                 font-weight: bold;
                 font-size: 1.2em;
             }
-
+            
             .nav {
                 display: flex;
+                flex-wrap: nowrap;
                 gap: 10px;
+                overflow-x: scroll;         /* allows scroll */
+                white-space: nowrap;
+                max-width: 100vw;
+                scrollbar-width: auto;      /* for Firefox */
+                scrollbar-color: #999 #333; /* optional: style scrollbar */
             }
+
+            /* WebKit (Chrome, Safari) */
+            .nav::-webkit-scrollbar {
+                height: 8px;                /* adjust height of horizontal scrollbar */
+            }
+
+            .nav::-webkit-scrollbar-thumb {
+                background: #999;           /* color of scroll thumb */
+                border-radius: 4px;
+            }
+
+            .nav::-webkit-scrollbar-track {
+                background: #333;           /* background of scrollbar track */
+            }
+
 
             .nav-item {
                 background: none;
@@ -123,6 +144,39 @@
                 .date_subdiv {
                     width: 100%;
                 }
+
+                .banner{
+                    padding: 20px;
+                }
+            }
+
+            @media (max-width: 800px) {
+                /* #header{
+                    display: flex;
+                    flex-direction: column;
+                } */
+                .nav{
+                    display: none;
+                }
+                #home, #schedule, #program, #workshop_submission, #challenge, #contact{
+                    width: 100% !important;
+                    min-width: 0 !important;
+                }
+
+                #speakerProg{
+                    flex-direction: column;
+                }
+                .speakerCard{
+                    width: 100% !important;
+                }
+
+                .challengeCard{
+                    flex-direction: column !important;
+                }
+
+                .sectionHeading{
+                    font-size: 30px !important;
+                }
             }
         </style>
 
@@ -140,6 +194,16 @@
                 <button class="nav-item" id="challengeBtn">Challenge</button>
                 <button class="nav-item" id="contactBtn">Organizers</button>
             </nav>
+
+            <select id="selectSection" style="display: none;">
+                <option value="home">Home</option>
+                <option value="schedule">Schedule</option>
+                <option value="program">Program & Speakers</option>
+                <option value="workshop">Paper Submission</option>
+                <option value="challenge">Challenge</option>
+                <option value="contact">Organizers</option>
+            </select>
+
         </header>
 
         <section class="banner" id="parallaxBanner">
@@ -241,24 +305,6 @@
 
             <br><br><br>
 
-            <!-- <h2>🏆 Call for Competition: MSLR Challenge</h2>
-            <p>The MSLR Challenge features two competitive tracks derived from the <strong>MILAGE</strong> and <strong>WSLU</strong> initiatives:</p>
-
-            <h3>Tracks</h3>
-            <ul>
-                <li><strong>Track 1:</strong> Continuous Sign Language Recognition (RGB)</li>
-                <li><strong>Track 2:</strong> Isolated Multimodal SLR (RGB-D + Radar)</li>
-            </ul>
-
-            <h3>Tasks</h3>
-            <ul>
-                <li>Signer-independent recognition</li>
-                <li>Unseen-sentence generalization</li>
-            </ul>
-
-            <h3>Prizes & Recognition</h3>
-            <p>Top teams will be honored at the workshop, with awards presented to the <strong>Top-3 Winners per Track</strong>.</p> -->
-
             <div class="footer" >
                 <hr><br><br>
                 
@@ -292,7 +338,7 @@
         <div id="schedule" class="body" style="padding:50px; display: none; margin: auto; width: 70%; min-width: 500px; font-family: inherit;">
             <br><br>
 
-            <h1 style="text-align: center; font-size: 50px; text-decoration: underline;">Important Dates</h1>
+            <h1 class="sectionHeading" style="text-align: center; font-size: 50px; text-decoration: underline;">Important Dates</h1>
             <br><br>
 
             <div id="date_div" style="display: flex; justify-content: space-evenly;">
@@ -397,7 +443,7 @@
         <div id="program" class="body" style="padding: 50px; margin: auto; width: 70%; min-width: 700px; ">
             <br><br>
 
-            <h1 style="text-align: center; font-size: 50px; text-decoration: underline;">Workshop Program</h1>
+            <h1 class="sectionHeading" style="text-align: center; font-size: 50px; text-decoration: underline;">Workshop Program</h1>
             <br>
             
             <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
@@ -408,29 +454,29 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr><td style="padding: 8px;">08:30–08:45</td><td style="padding: 8px;">Opening remarks, goals, challenge overview</td></tr>
-                <tr style="background-color: #f9f9f9;"><td style="padding: 8px;">08:45–09:45</td><td style="padding: 8px;">Oral presentations</td></tr>
-                <tr><td style="padding: 8px;">09:45–10:15</td><td style="padding: 8px;">Keynote 1</td></tr>
-                <tr style="background-color: #f9f9f9;"><td style="padding: 8px;">10:15–11:15</td><td style="padding: 8px;">Oral presentations</td></tr>
-                <tr><td style="padding: 8px;">11:15–11:30</td><td style="padding: 8px;">Coffee break</td></tr>
-                <tr style="background-color: #f9f9f9;"><td style="padding: 8px;">11:30–12:00</td><td style="padding: 8px;">Keynote 2</td></tr>
-                <tr><td style="padding: 8px;">12:00–13:00</td><td style="padding: 8px;">Oral presentations</td></tr>
-                <tr style="background-color: #f9f9f9;"><td style="padding: 8px;">13:00–14:00</td><td style="padding: 8px;">Lunch break</td></tr>
-                <tr><td style="padding: 8px;">14:00–15:00</td><td style="padding: 8px;">Oral presentations</td></tr>
-                <tr style="background-color: #f9f9f9;"><td style="padding: 8px;">15:00–15:30</td><td style="padding: 8px;">Keynote 3</td></tr>
-                <tr><td style="padding: 8px;">15:30–17:30</td><td style="padding: 8px;">Poster session</td></tr>
-                <tr style="background-color: #f9f9f9;"><td style="padding: 8px;">17:30–18:00</td><td style="padding: 8px;">Panel discussion (dataset curation, future directions)</td></tr>
-                <tr><td style="padding: 8px;">18:00–18:15</td><td style="padding: 8px;">Awards and closing remarks</td></tr>
+                <tr><td style="padding: 8px;">08:30-08:45</td><td style="padding: 8px;">Opening remarks, goals, challenge overview</td></tr>
+                <tr style="background-color: #f9f9f9;"><td style="padding: 8px;">08:45-09:45</td><td style="padding: 8px;">Oral presentations</td></tr>
+                <tr><td style="padding: 8px;">09:45-10:15</td><td style="padding: 8px;">Keynote 1</td></tr>
+                <tr style="background-color: #f9f9f9;"><td style="padding: 8px;">10:15-11:15</td><td style="padding: 8px;">Oral presentations</td></tr>
+                <tr><td style="padding: 8px;">11:15-11:30</td><td style="padding: 8px;">Coffee break</td></tr>
+                <tr style="background-color: #f9f9f9;"><td style="padding: 8px;">11:30-12:00</td><td style="padding: 8px;">Keynote 2</td></tr>
+                <tr><td style="padding: 8px;">12:00-13:00</td><td style="padding: 8px;">Oral presentations</td></tr>
+                <tr style="background-color: #f9f9f9;"><td style="padding: 8px;">13:00-14:00</td><td style="padding: 8px;">Lunch break</td></tr>
+                <tr><td style="padding: 8px;">14:00-15:00</td><td style="padding: 8px;">Oral presentations</td></tr>
+                <tr style="background-color: #f9f9f9;"><td style="padding: 8px;">15:00-15:30</td><td style="padding: 8px;">Keynote 3</td></tr>
+                <tr><td style="padding: 8px;">15:30-17:30</td><td style="padding: 8px;">Poster session</td></tr>
+                <tr style="background-color: #f9f9f9;"><td style="padding: 8px;">17:30-18:00</td><td style="padding: 8px;">Panel discussion (dataset curation, future directions)</td></tr>
+                <tr><td style="padding: 8px;">18:00-18:15</td><td style="padding: 8px;">Awards and closing remarks</td></tr>
                 </tbody>
             </table>
                 
             <h2 style="margin: auto; margin-top: 60px; width: fit-content; text-decoration: underline; font-size: 30px;">Invited Speakers</h2>
             <br>
 
-            <div style="display: flex; overflow-x: auto; gap: 40px; padding: 20px 0; scroll-snap-type: x mandatory; margin: auto;">
+            <div id="speakerProg" style="display: flex; overflow-x: auto; gap: 40px; padding: 20px 0; scroll-snap-type: x mandatory; margin: auto;">
                 
                 <!-- Speaker 1 -->
-                <div style="flex: 0 0 auto; width: 440px; scroll-snap-align: start;">
+                <div class="speakerCard" style="flex: 0 0 auto; width: 440px; scroll-snap-align: start;">
                         <div style="text-align: center;">
                             <img src="./Images/RichardBowden.webp" alt="Prof. Richard Bowden" style="width: 170px; height: 170px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
                         </div>
@@ -441,7 +487,7 @@
                 </div>
 
                 <!-- Speaker 2 -->
-                <div style="flex: 0 0 auto; width: 440px; scroll-snap-align: start;">
+                <div class="speakerCard" style="flex: 0 0 auto; width: 440px; scroll-snap-align: start;">
                     <div style="text-align: center;">
                         <img src="./Images/oscarkoller.png" alt="Dr. Oscar Koller" style="width: 170px; height: 170px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
                     </div>
@@ -452,7 +498,7 @@
                 </div>
                 
                 <!-- Speaker 3 -->
-                <div style="flex: 0 0 auto; width: 440px; scroll-snap-align: start;">
+                <div class="speakerCard" style="flex: 0 0 auto; width: 440px; scroll-snap-align: start;">
                     <div style="text-align: center;">
                         <img src="./Images/ehsan.jpeg" alt="Dr. Ehsan Hoque" style="width: 170px; height: 170px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
                     </div>
@@ -496,7 +542,7 @@
         <!-- SECTION 4 -->
         <div id="workshop_submission" style="padding: 50px; margin: auto; width: 90%; max-width: 1000px; ">
             <br><br>
-            <h1 style="text-align: center; font-size: 48px; text-decoration: underline;">Submission Guidelines</h1>
+            <h1 class="sectionHeading" style="text-align: center; font-size: 48px; text-decoration: underline;">Submission Guidelines</h1>
 
             <div style="display: flex; flex-direction: column; gap: 30px; margin-top: 40px;">
 
@@ -620,7 +666,7 @@
             <br><br><br>
 
             <!-- Track 1 -->
-            <div style="display: flex; gap: 30px; margin-bottom: 60px; padding: 10px;">
+            <div class="challengeCard" style="display: flex; gap: 30px; margin-bottom: 60px; padding: 10px;">
                 <div style="flex: 1;">
                     <!-- Placeholder for image -->
                     <img src="./Images/track1.png" alt="Track 1" style="width: 100%; border-radius: 12px; object-fit: cover;">
@@ -659,7 +705,7 @@
             <div style="border-top: 1px solid gray; margin-bottom: 40px; margin-top: -10px;"></div>
 
             <!-- Track 2 -->
-            <div style="display: flex; gap: 30px; flex-direction: row-reverse;  padding: 10px;">
+            <div class="challengeCard" style="display: flex; gap: 30px; flex-direction: row-reverse;  padding: 10px;">
                 <div style="flex: 1;">
                 <!-- Placeholder for image -->
                 <img src="./Images/track2.png" alt="Track 2" style="width: 100%; border-radius: 12px; object-fit: cover;">
@@ -713,7 +759,7 @@
         <!-- SECTION 6 -->
         <div id="contact" class="body" style="padding: 50px; margin: auto; width: 70%; min-width: 700px;">
             <br><br>
-            <h1 style="text-align: center; font-size: 40px; text-decoration: underline;">Organizers</h1>
+            <h1 class="sectionHeading" style="text-align: center; font-size: 40px; text-decoration: underline;">Organizers</h1>
             <br>
 
             <div style="background-color: #f9f9f9; padding: 25px 30px; border-left: 5px solid #4a90e2; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
@@ -921,6 +967,41 @@
                 });
             });
 
+            document.addEventListener('DOMContentLoaded', function () {
+                const selectMenu = document.getElementById('selectSection');
+                const buttons = {
+                    home: document.getElementById('homeBtn'),
+                    schedule: document.getElementById('scheduleBtn'),
+                    program: document.getElementById('programBtn'),
+                    workshop: document.getElementById('workshopBtn'),
+                    challenge: document.getElementById('challengeBtn'),
+                    contact: document.getElementById('contactBtn')
+                };
+
+                // Listen for change event on the select dropdown
+                selectMenu.addEventListener('change', function () {
+                    const selectedValue = selectMenu.value;
+
+                    // If the selected option value matches a button id, click that button
+                    if (buttons[selectedValue]) {
+                        buttons[selectedValue].click();
+                    }
+                });
+
+                // Initial check to see if the screen size is below 800px to show the select dropdown
+                if (window.innerWidth < 800) {
+                    selectMenu.style.display = 'block';
+                }
+
+                // Handle resizing of the window
+                window.addEventListener('resize', function () {
+                    if (window.innerWidth < 800) {
+                        selectMenu.style.display = 'block';
+                    } else {
+                        selectMenu.style.display = 'none';
+                    }
+                });
+            });
         </script>
     </body>
 </html>
