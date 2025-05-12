@@ -168,7 +168,7 @@
                     padding:15px !important;
                 } */
 
-                #speakerProg{
+                #speakerProg, #speakersHome{
                     flex-direction: column;
                 }
                 .speakerCard{
@@ -189,7 +189,7 @@
                 }
 
                 .banner-content{
-                    padding-top: 10px;
+                    padding-top: 20px;
                 }
             }
         </style>
@@ -223,7 +223,7 @@
         <section class="banner" id="parallaxBanner">
             <div class="banner-content">
                 <br><br>
-                <h1>Multimodal Sign Language Recognition</h1>
+                <h1 class="sectionHeading">Multimodal Sign Language Recognition</h1>
                 <p style="text-align: center; margin: auto; font-size: 25px;">IEEE/CVF ICCV 2025</p>
                 <br>
                 <p style="text-align: center; margin: auto; font-size: 18px; text-decoration: underline;">Honolulu, Hawaii, USA</p>
@@ -291,10 +291,10 @@
 
             <h2>Distinguised Speakers</h2>
 
-            <div style="display: flex; overflow-x: auto; gap: 10px; padding: 20px 0; scroll-snap-type: x mandatory; max-width: 900px; margin: auto;">
+            <div id="speakersHome" style="display: flex; overflow-x: auto; gap: 10px; padding: 20px 0; scroll-snap-type: x mandatory; max-width: 900px; margin: auto;">
                 
                 <!-- Speaker 1 -->
-                <div style="flex: 0 0 auto; width: 300px; scroll-snap-align: start;">
+                <div class="speakerCard" style="flex: 0 0 auto; width: 300px; scroll-snap-align: start;">
                         <div style="text-align: center;">
                             <img src="./Images/RichardBowden.webp" alt="Prof. Richard Bowden" style="width: 170px; height: 170px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
                         </div>
@@ -302,14 +302,14 @@
                 </div>
 
                 <!-- Speaker 2 -->
-                <div style="flex: 0 0 auto; width: 300px; scroll-snap-align: start;">
+                <div class="speakerCard" style="flex: 0 0 auto; width: 300px; scroll-snap-align: start;">
                     <div style="text-align: center;">
                         <img src="./Images/oscarkoller.png" alt="Dr. Oscar Koller" style="width: 170px; height: 170px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
                     </div>
                     <h3 style="color: #2b6cb0; text-align: center;">Dr. Oscar Koller <br><span style="font-weight: normal;">Microsoft Inc., USA</span></h3>
                 </div>
 
-                <div style="flex: 0 0 auto; width: 300px; scroll-snap-align: start;">
+                <div class="speakerCard" style="flex: 0 0 auto; width: 300px; scroll-snap-align: start;">
                     <div style="text-align: center;">
                         <img src="./Images/ehsan.jpeg" alt="Dr. Ehsan Hoque" style="width: 170px; height: 170px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
                     </div>
