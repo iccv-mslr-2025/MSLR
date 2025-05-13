@@ -8,7 +8,7 @@ const deadlinesData = {
     workshop: [
         { date: "May 12, 2025", event: "Launch of the Challenge", icon: Rocket },
         { date: "June 12, 2025", event: "Workshop Paper Submission Deadline", icon: Paperclip },
-        { date: "June 27, 2025", event: "Notification to Authors", icon: CheckCircle },
+        { date: "June 25, 2025", event: "Notification to Authors", icon: CheckCircle },
         { date: "July 20, 2025", event: "Camera-ready Deadline", icon: ListChecks },
         { date: "October 20, 2025", event: "Workshop Date", icon: Mic, highlight: true },
     ],
