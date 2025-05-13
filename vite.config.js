@@ -2,6 +2,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
+import viteImagemin from 'vite-plugin-imagemin'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,6 +14,9 @@ export default defineConfig({
       // Don't bundle React in development for faster rebuilds
       jsxRuntime: process.env.NODE_ENV === 'production' ? 'automatic' : 'classic',
     }),
+    viteImagemin({
+        webp: false, // ← turn this off!
+    })
   ],
 
   base: "/MSLR/",
