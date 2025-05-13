@@ -65,7 +65,7 @@ const Hero = () => {
 
             {/* Background image */}
             <ImageWithSkeleton
-                src="/MSLR/assets/images/honolulu_skyline.jpeg"
+                src="/MSLR/assets/images/honolulu_skyline2.jpeg"
                 alt="Honolulu skyline"
                 className="w-full h-full object-cover object-center"
                 width="100%"
