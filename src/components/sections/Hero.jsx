@@ -7,7 +7,7 @@ import { preloadCriticalImages } from '../../utils/imageOptimizer';
 // Using the provided images
 import iccv from "../../assets/images/iccv2025.svg";
 import signLanguageHands from "../../assets/images/1__LRD9SzCgmze-8jC25O3KA.png";
-import honoluluSkyline from "../../assets/images/honolulu_skyline2.jpeg";
+import honoluluSkyline from "../../assets/images/honolulu_skyline.jpeg";
 
 const Hero = () => {
     const title = "Multimodal Sign Language Recognition";
@@ -65,7 +65,7 @@ const Hero = () => {
 
             {/* Background image */}
             <ImageWithSkeleton
-                src="/MSLR/assets/images/honolulu_skyline2.jpeg"
+                src="../../assets/images/honolulu_skyline.jpeg"
                 alt="Honolulu skyline"
                 className="w-full h-full object-cover object-center"
                 width="100%"
