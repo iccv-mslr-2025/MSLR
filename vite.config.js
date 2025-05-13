@@ -2,7 +2,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import viteImagemin from 'vite-plugin-imagemin'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -14,9 +13,6 @@ export default defineConfig({
       // Don't bundle React in development for faster rebuilds
       jsxRuntime: process.env.NODE_ENV === 'production' ? 'automatic' : 'classic',
     }),
-    viteImagemin({
-        webp: false, // ← turn this off!
-    })
   ],
 
   base: "/MSLR/",
@@ -42,7 +38,7 @@ export default defineConfig({
   // Production build optimizations
   build: {
     target: 'es2015',
-    assetsInlineLimit: 4096,
+    // assetsInlineLimit: 4096,
     cssCodeSplit: true,
     sourcemap: false,
     minify: 'terser',
@@ -52,6 +48,7 @@ export default defineConfig({
         drop_debugger: true,
       },
     },
+    assetsInlineLimit: 0, // Or a very large number
     rollupOptions: {
       output: {
         manualChunks: {
