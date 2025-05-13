@@ -14,13 +14,13 @@ const Hero = () => {
     const subtitle = "IEEE/CVF ICCV 2025 Workshop";
 
     // Preload critical images for best LCP performance
-    useEffect(() => {
-        preloadCriticalImages([
-            signLanguageHands,
-            honoluluSkyline,
-            iccv
-        ]);
-    }, []);
+    // useEffect(() => {
+    //     preloadCriticalImages([
+    //         signLanguageHands,
+    //         honoluluSkyline,
+    //         iccv
+    //     ]);
+    // }, []);
 
     const textVariants = {
         hidden: { opacity: 0, y: 20 },
@@ -65,7 +65,7 @@ const Hero = () => {
 
             {/* Background image */}
             <ImageWithSkeleton
-                src="/assets/images/honolulu_skyline.jpeg"
+                src={honoluluSkyline}
                 alt="Honolulu skyline"
                 className="w-full h-full object-cover object-center"
                 width="100%"
