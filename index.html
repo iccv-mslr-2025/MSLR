@@ -693,21 +693,32 @@
                 <div style="flex: 2;">
                     <h3 style="color: #2b6cb0; font-size: 24px; margin-bottom: 10px;">🌊 Track 1: Continuous Sign Language Recognition</h3>
                     <p style="margin-bottom: 15px;">
-                        Using the Isharah dataset, this track features 30,000 videos across 2,000 unique sentences by 18 signers. 
-                        Participants will be provided pose modality data. The dataset paper will be available on arXiv in June 2025.
+                        Using the Isharah dataset, this track features around 14,000 videos across 1,000 unique sentences by 18 signers. 
+                        Participants will be provided with pose modality data consisting of the full body skeleton, 2D hand keypoints (both hands), face keypoints, and lips contour — totaling 86 keypoints per frame. 
+                        The dataset paper will be available on arXiv in June 2025.
                     </p>
+
                     <p style="margin-bottom: 15px;">
                         Participants can compete in one or both of the following sub-tasks:
                     </p>
                     <ul style="margin-top: -10px; margin-bottom: 15px; padding-left: 20px;">
-                        <li><strong>Signer-Independent:</strong> Evaluate generalization across signers by training on a subset of individuals and testing on unseen signers.</li>
-                        <li><strong>Unseen Sentences:</strong> Assess the ability to recognize sentence-level signs that were not part of the training set.</li>
+                        <li>
+                            <strong>Signer-Independent:</strong> Train your models on a subset of signers and evaluate on entirely unseen signers. 
+                            This sub-task focuses on cross-signer generalization, which is critical for building scalable real-world CSLR systems.
+                        </li>
+                        <li>
+                            <strong>Unseen Sentences:</strong> Train on a subset of sentences and evaluate on structurally different, unseen sentences. 
+                            This tests your model's ability to understand grammar, semantics, and sentence-level sign composition without prior exposure.
+                        </li>
                     </ul>
+                    <p style="margin-bottom: 15px;">
+                        🔍 <strong>Evaluation:</strong> Submissions will be evaluated using <strong>Word Error Rate (WER)</strong>, which measures the edit distance (substitutions, deletions, insertions) between predicted and reference sentences. 
+                        Lower WER indicates better performance.
+                    </p>
                     <p>
                         🗂️ <a href="#">Data</a> /
                         💻 <a href="#">Development Kit</a> /
                         📚 <a href="#">Rules</a>
-                        <!-- 📊 Eval: <a href="#">Challenge</a> | <a href="#">Test</a> -->
                     </p>
                     <p>🤝 Sponsor: <a href="https://www.sharedtech.com.sa/">SharedTech</a></p>
                     <p>💰 Prizes:</p>
@@ -718,6 +729,7 @@
                     </ul>
                 </div>
             </div>
+
 
 
 
