@@ -7,7 +7,8 @@ import { preloadCriticalImages } from '../../utils/imageOptimizer';
 // Using the provided images
 import iccv from "../../assets/images/iccv2025.svg";
 import signLanguageHands from "../../assets/images/1__LRD9SzCgmze-8jC25O3KA.png";
-import honoluluSkyline from "../..//assets/images/honoluluSkyline.jpeg";
+import honoluluSkyline from "@/assets/images/honoluluSkyline.jpeg";
+
 
 const Hero = () => {
     const title = "Multimodal Sign Language Recognition";
