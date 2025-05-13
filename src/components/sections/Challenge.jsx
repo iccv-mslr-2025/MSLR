@@ -28,7 +28,8 @@ const challengeTracks = [
         ],
         links: [
             { text: "Starter Kit", url: "https://github.com/gufranSabri/Pose86K-CSLR-Isharah", icon: FileCode },
-            { text: "Competition (Kaggle)", url: "https://www.kaggle.com/competitions/your-competition-name", icon: BookOpen }
+            { text: "Competition - Task 1 (Kaggle)", url: "https://www.kaggle.com/t/a6826ca7f2d64ae0a8819408e913c992", icon: BookOpen },
+            { text: "Competition - Task 2 (Kaggle)", url: "https://www.kaggle.com/t/ebbc91f79f874a0080a1d125494278d7", icon: BookOpen }
         ],
 
         prizes: [
@@ -110,7 +111,7 @@ const ChallengeCard = ({ track, index }) => {
                 <div className="flex flex-wrap gap-3 mb-6">
                 {track.links.map(link => {
                     const LinkIcon = link.icon;
-                    const isCompetitionLink = link.text.toLowerCase().includes("competition");
+                    const isCompetitionLink = link.text.toLowerCase().includes("competition") || link.text.toLowerCase().includes("task");
                     return (
                     <a
                         key={link.text}
