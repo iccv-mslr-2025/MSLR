@@ -7,20 +7,20 @@ import { preloadCriticalImages } from '../../utils/imageOptimizer';
 // Using the provided images
 import iccv from "../../assets/images/iccv2025.svg";
 import signLanguageHands from "../../assets/images/1__LRD9SzCgmze-8jC25O3KA.png";
-// import honoluluSkyline from "../../assets/images/honoluluSkyline.jpeg";
+import honoluluSkyline from "../..//assets/images/honoluluSkyline.jpeg";
 
 const Hero = () => {
     const title = "Multimodal Sign Language Recognition";
     const subtitle = "IEEE/CVF ICCV 2025 Workshop";
 
     // Preload critical images for best LCP performance
-    // useEffect(() => {
-    //     preloadCriticalImages([
-    //         signLanguageHands,
-    //         honoluluSkyline,
-    //         iccv
-    //     ]);
-    // }, []);
+    useEffect(() => {
+        preloadCriticalImages([
+            signLanguageHands,
+            honoluluSkyline,
+            iccv
+        ]);
+    }, []);
 
     const textVariants = {
         hidden: { opacity: 0, y: 20 },
@@ -65,7 +65,7 @@ const Hero = () => {
 
             {/* Background image */}
             <ImageWithSkeleton
-                src="/MSLR/assets/images/honoluluSkyline.jpeg" // include base
+                src={honoluluSkyline}
                 alt="Honolulu skyline"
                 className="w-full h-full object-cover object-center"
                 width="100%"
