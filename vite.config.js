@@ -5,9 +5,6 @@ import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-
-  base: "/MSLR",
-
   plugins: [
     react({
       // Only use Fast Refresh in development
@@ -17,6 +14,8 @@ export default defineConfig({
       jsxRuntime: process.env.NODE_ENV === 'production' ? 'automatic' : 'classic',
     }),
   ],
+
+  base: "/MSLR/",
   
   resolve: {
     alias: {
