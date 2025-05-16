@@ -55,8 +55,8 @@ const challengeTracks = [
         evaluation: "<strong>Evaluation:</strong> Submissions will be evaluated using <strong>Top-1 Accuracy</strong>, which measures the percentage of correctly predicted gestures. Higher accuracy indicates better performance.",
         subTasks: [],
         links: [
-            { text: "Starter Kit", url: "https://github.com/gufranSabri/Pose86K-CSLR-Isharah", icon: FileCode },
-            { text: "Competition (Kaggle)", url: "https://www.kaggle.com/competitions/your-competition-name", icon: BookOpen }
+            { text: "Starter Kit", url: "https://github.com/IngRaffaeleMineo/iccv-mslr-2025-track-2", icon: FileCode },
+            { text: "Competition (Kaggle)", url: "https://www.kaggle.com/competitions/iccv-mslr-2025-track-2", icon: BookOpen }
         ],
         sponsor: null, // { name: "TBD", url: "#" },
         prizes: [] // { place: "TBD", amount: "TBD" }

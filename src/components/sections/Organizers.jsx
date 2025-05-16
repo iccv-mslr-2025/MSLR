@@ -7,7 +7,7 @@ import { Users, UserCheck, Mail, ExternalLink, MapPin, Award as AwardIcon } from
 import Dr_Hamza from "../../assets/images/HamzahLuqman.jpeg";
 import Dr_Simone from "../../assets/images/simone.png";
 import Dr_Maad from "../../assets/images/maad.jpg";
-import Dr_Raffaele from "../../assets/images/rafaele.jpeg";
+import Dr_Raffaele from "../../assets/images/raffaele.jpeg";
 
 const organizersData = {
   chairs: [
