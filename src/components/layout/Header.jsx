@@ -57,7 +57,7 @@ const Header = forwardRef(({ navLinks, activeSection, onNavClick }, ref) => {
           {/* Logo */}
           <button onClick={() => onNavClick('hero')} className="flex items-center space-x-2 transition-opacity">
             <img src={logo} alt="MSLR Logo" className="h-10 w-30 rounded-full" />
-            <span className={`font-poppins text-xl font-semibold hidden sm:inline ${isScrolled ? 'text-brand-accent-light' : 'text-brand-primary-dark'}`}>MSLR 2025</span>
+            {/* <span className={`font-poppins text-xl font-semibold hidden sm:inline ${isScrolled ? 'text-brand-accent-light' : 'text-brand-primary-dark'}`}>MSLR 2025</span> */}
           </button>
 
           {/* Desktop Navigation */}

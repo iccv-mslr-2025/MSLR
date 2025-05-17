@@ -7,17 +7,17 @@ import { CalendarDays, CheckCircle, ListChecks, Award, Mic, Paperclip, Rocket, T
 const deadlinesData = {
     workshop: [
         { date: "May 12, 2025", event: "Launch of the Challenge", icon: Rocket },
-        { date: "June 12, 2025", event: "Workshop Paper Submission Deadline", icon: Paperclip },
-        { date: "June 25, 2025", event: "Notification to Authors", icon: CheckCircle },
-        { date: "July 20, 2025", event: "Camera-ready Deadline", icon: ListChecks },
+        { date: "June 25, 2025", event: "Workshop Paper Submission Deadline", icon: Paperclip },
+        { date: "July 9, 2025", event: "Notification to Authors", icon: CheckCircle },
+        { date: "August 10, 2025", event: "Camera-ready Deadline", icon: ListChecks },
         { date: "October 20, 2025", event: "Workshop Date", icon: Mic, highlight: true },
     ],
     challenge: [
         { date: "May 12, 2025", event: "Release of training and development sets", icon: Rocket },
         { date: "June 2, 2025", event: "Release of test sets", icon: TestTube2 },
-        { date: "June 10, 2025", event: "Challenge submission deadline", icon: Paperclip },
-        { date: "June 15, 2025", event: "Announcement of results", icon: Award },
-        { date: "June 22, 2025", event: "Paper submission deadline", icon: ListChecks },
+        { date: "June 16, 2025", event: "Challenge submission deadline", icon: Paperclip },
+        { date: "June 19, 2025", event: "Announcement of results", icon: Award },
+        { date: "July 3, 2025", event: "Paper submission deadline", icon: ListChecks },
     ]
 };
 
