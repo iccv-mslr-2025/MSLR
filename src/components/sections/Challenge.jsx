@@ -28,8 +28,8 @@ const challengeTracks = [
         ],
         links: [
             { text: "Starter Kit", url: "https://github.com/gufranSabri/Pose86K-CSLR-Isharah", icon: FileCode },
-            { text: "Competition - Task 1 (Kaggle)", url: "https://www.kaggle.com/t/a6826ca7f2d64ae0a8819408e913c992", icon: BookOpen },
-            { text: "Competition - Task 2 (Kaggle)", url: "https://www.kaggle.com/t/ebbc91f79f874a0080a1d125494278d7", icon: BookOpen }
+            { text: "Competition - Task 1 (CodaLab)", url: "https://codalab.lisn.upsaclay.fr/competitions/22899", icon: BookOpen },
+            { text: "Competition - Task 2 (CodaLab)", url: "https://codalab.lisn.upsaclay.fr/competitions/22900", icon: BookOpen }
         ],
 
         prizes: [
