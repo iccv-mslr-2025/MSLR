@@ -120,6 +120,11 @@ const Submission = () => {
                     <Edit3 size={20} className="mr-2.5" /> Go to CMT Submission Portal
                 </a>
             </motion.div>
+            <div className="mt-8 text-center text-sm text-brand-neutral-600">
+                The Microsoft CMT service (https://cmt3.research.microsoft.com/) was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+                <br />
+                Accepted papers will be published in the official <strong>ICCV 2025 workshop proceedings</strong>.
+            </div>
         </SectionWrapper>
     );
 };
