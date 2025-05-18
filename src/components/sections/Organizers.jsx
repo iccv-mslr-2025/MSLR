@@ -7,34 +7,36 @@ import { Users, UserCheck, Mail, ExternalLink, MapPin, Award as AwardIcon } from
 import Dr_Hamza from "../../assets/images/HamzahLuqman.jpeg";
 import Dr_Simone from "../../assets/images/simone.png";
 import Dr_Maad from "../../assets/images/maad.jpg";
-import Dr_Raffaele from "../../assets/images/raffaele.jpeg";
+import Eng_Raffaele from "../../assets/images/raffaele.jpeg";
 
 const organizersData = {
   chairs: [
     { name: "Dr. Hamzah Luqman", affiliation: "King Fahd University of Petroleum and Minerals, KSA", imgSrc: Dr_Hamza , link: "https://scholar.google.com/citations?user=JgGFu2QAAAAJ&hl=en"},
     { name: "Dr. Simone Palazzo", affiliation: "University of Catania, Italy", imgSrc: Dr_Simone , link:"https://scholar.google.com/citations?hl=en&user=yJr6TqAAAAAJ"},
     { name: "Dr. Maad Alowaifeer", affiliation: "King Fahd University of Petroleum & Minerals, KSA", imgSrc: Dr_Maad , link:"https://scholar.google.com/citations?hl=en&user=dLjEuacAAAAJ"},
-    { name: "Dr. Raffaele Mineo", affiliation: "University of Catania, Italy", imgSrc: Dr_Raffaele , link:"https://scholar.google.com/citations?hl=en&user=nYSplWUAAAAJ"},
+    { name: "Eng. Raffaele Mineo", affiliation: "University of Catania, Italy", imgSrc: Eng_Raffaele , link:"https://scholar.google.com/citations?hl=en&user=nYSplWUAAAAJ"},
   ],
-  members: [
+  workshopOrganizers: [
     "Dr. Motaz Alfarraj — King Fahd University of Petroleum & Minerals (KFUPM), KSA",
     "Dr. Mufti Mahmud — King Fahd University of Petroleum & Minerals, KSA",
     "Dr. Federica Proietto Salanitri — University of Catania, Italy",
     "Dr. Concetto Spampinato — University of Catania, Italy",
-    "Dr. Giovanni Bellitto — University of Catania, Italy",
     "Dr. Silvio Giancola — King Abdullah University of Science and Technology, KSA",
     "Dr. Egidio Ragonese — University of Catania, Italy",
-    "Dr. Sevgi Z. Gurbuz — North Carolina State University, USA",
-    "Eng. Kamrul Islam — University of Alabama, USA",
     "Dr. Muhammad Haris Khan — Mohamed Bin Zayed University of AI, UAE",
     "Dr. Moi Hoon Yap — Manchester Metropolitan University, UK",
+    "Dr. Gaia Caligiore - University of Modena and Reggio Emilia, Italy",
+    "Dr. Sabina Fontana - University of Catania, Italy",
   ],
   challengeOrganizers: [
     "Ahmed Abul Hasanaath — King Fahd University of Petroleum & Minerals, KSA",
     "Murtadha Aljubran — Mohamed Bin Zayed University of Artificial Intelligence, UAE",
     "Sarah Alyami — King Fahd University of Petroleum & Minerals, KSA",
     "Dr. Senya Polikovsky — Max Planck Institute for Intelligent Systems, Tübingen, Germany",
-    "Eng. Amelia Sorrenti — University Campus Bio-Medico of Rome and University of Catania, Italy",
+    "Dr. Sevgi Z. Gurbuz — North Carolina State University, USA",
+    "Eng. Kamrul Islam — North Carolina State University, USA",
+    "Dr. Giovanni Bellitto — University of Catania, Italy",
+    "Eng. Amelia Sorrenti — University of Catania, Italy",
   ],
   contact: [
     { name: "Eng. Raffaele Mineo", email: "raffaele.mineo[at]unict.it" },
@@ -104,7 +106,7 @@ const Organizers = () => {
 
       <SectionWrapper id="organizers-teams-internal" title="Our Teams" subtitle="Dedicated Committees" bgColor="bg-white">
         <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-          <InfoListCard title="Workshop Members" items={organizersData.members} Icon={Users} delay={0} />
+          <InfoListCard title="Workshop Organizers" items={organizersData.workshopOrganizers} Icon={Users} delay={0} />
           <InfoListCard title="Challenge Organizers" items={organizersData.challengeOrganizers} Icon={AwardIcon} delay={0.1} /> {/* AwardIcon is now defined via alias */}
         </div>
       </SectionWrapper>
