@@ -7,6 +7,7 @@ import logo from "../../assets/images/logo.jpeg"
 import iccv from "../../assets/images/iccv2025.svg"
 import SharedTech from "../../assets/images/SharedTech.png"
 import jrcai from "../../assets/images/jrc-kfupm-logo-white.png"
+import perceivelab from "../../assets/images/PeRCeiVeLab-LogoExtended.png"
 
 
 const Footer = () => {
@@ -96,6 +97,14 @@ const Footer = () => {
                             className="hover:opacity-80 transition-opacity"
                         >
                             <img src={jrcai} alt="JRCAI Logo" className="h-20 sm:h-24 object-contain" />
+                        </a>
+                        <a
+                            href="http://perceivelab.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:opacity-80 transition-opacity"
+                        >
+                            <img src={perceivelab} alt="PeRCeiVeLab Logo" className="h-20 sm:h-24 object-contain" />
                         </a>
                     </div>
                 </div>
