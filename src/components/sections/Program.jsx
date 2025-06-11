@@ -91,7 +91,7 @@ const Program = () => {
                 </motion.div>
             </SectionWrapper>
 
-            {/* <SectionWrapper id="program-speakers-internal" title="Invited Speakers" subtitle="Learn from the Leaders" bgColor="bg-white">
+            <SectionWrapper id="program-speakers-internal" title="Invited Speakers" subtitle="Learn from the Leaders" bgColor="bg-white">
                 <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
                     {speakersData.map((speaker, index) => (
                         <motion.div
@@ -107,6 +107,16 @@ const Program = () => {
                             <h3 className="text-xl lg:text-2xl font-semibold text-brand-primary-dark mb-1">{speaker.name}</h3>
                             <p className="text-brand-neutral-600 text-sm mb-3">{speaker.affiliation}</p>
                             <p className="text-sm text-brand-neutral-700 leading-relaxed flex-grow mb-4 px-2">{speaker.bio}</p>
+                            {speaker.title && (
+                                <h4 className="text-lg font-semibold text-brand-primary-dark mt-2 px-2">
+                                    {speaker.title}
+                                </h4>
+                            )}
+                            {speaker.abstract && (
+                                <p className="text-sm text-brand-neutral-700 leading-relaxed mb-4 px-2">
+                                    {speaker.abstract}
+                                </p>
+                            )}
                             {speaker.link && (
                                 <a
                                     href={speaker.link}
@@ -120,7 +130,7 @@ const Program = () => {
                         </motion.div>
                     ))}
                 </div>
-            </SectionWrapper> */}
+            </SectionWrapper>
         </>
     );
 };
