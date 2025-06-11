@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Award, Users, Mic, FileText, ChevronRight, ExternalLink } from 'lucide-react';
 
 import Prof_Richard from "../../assets/images/RichardBowden.webp";
-import Dr_Oscar from "../../assets/images/oscarkoller.png";
+import Dr_Oscar from "../../assets/images/oscarkoller.jpg";
 import Dr_Ehsan from "../../assets/images/ehsan.jpeg";
 
 const content = {

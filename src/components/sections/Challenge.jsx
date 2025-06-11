@@ -50,7 +50,7 @@ const challengeTracks = [
         accentColor: "text-brand-accent",
         // Fixed image reference
         image: task2,
-        description: "This track presents a sign language recognition task on our multimodal dataset, featuring RGB videos and 60 GHz radar range-Doppler maps, and including 126 Italian Sign Language gestures (100 medical terms + 26 letters) across 205 expert sessions.",
+        description: "This track presents a sign language recognition task on our multimodal preliminary dataset, featuring RGB videos and 60-GHz radar range-Doppler maps, and including 126 Italian Sign Language gestures (100 medical terms + 26 letters) across 205 expert sessions.",
 
         evaluation: "<strong>Evaluation:</strong> Submissions will be evaluated using <strong>Top-1 Accuracy</strong>, which measures the percentage of correctly predicted gestures. Higher accuracy indicates better performance.",
         subTasks: [],

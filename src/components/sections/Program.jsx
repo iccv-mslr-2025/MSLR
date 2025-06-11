@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { ChevronRight, ExternalLink, UserCircle, Clock, Coffee, Users, Mic, Presentation, MessageSquare, Award as AwardIcon } from 'lucide-react';
 
 import Prof_Richard from "../../assets/images/RichardBowden.webp";
-import Dr_Oscar from "../../assets/images/oscarkoller.png";
+import Dr_Oscar from "../../assets/images/oscarkoller.jpg";
 import Dr_Ehsan from "../../assets/images/ehsan.jpeg";
 
 const programSchedule = [
@@ -26,7 +26,15 @@ const programSchedule = [
 
 const speakersData = [
     { name: "Prof. Richard Bowden", affiliation: "University of Surrey, UK", imgSrc: Prof_Richard, bio: "Richard Bowden is Professor of Computer Vision and Machine Learning at the University of Surrey where he leads the Cognitive Vision Group within CVSSP and is Associate Dean for postgraduate research within his faculty. His research centres on the use of computer vision to locate, track, understand and learn from humans.", link: "https://scholar.google.com/citations?user=mvvgDvcAAAAJ" },
-    { name: "Dr. Oscar Koller", affiliation: "Microsoft Inc., USA", imgSrc: Dr_Oscar, bio: "Oscar Koller is an applied scientist in Microsoft's Speech and Language group. His research interests span many topics across speech recognition, sign language translation, sign language production, and computer vision in general.", link: "https://scholar.google.com/citations?hl=it&user=vZrN9OgAAAAJ" },
+    { 
+        name: "Dr. Oscar Koller", 
+        affiliation: "Microsoft Inc., USA", 
+        imgSrc: Dr_Oscar, 
+        bio: "Oscar Koller is an applied scientist in Microsoft's Speech and Language group. His research interests span many topics across speech recognition, sign language translation, sign language production, and computer vision in general.", 
+        title: "Delivering Sign Language AI at Scale: From Synthetic Data to Real-World Use",
+        abstract: "In this keynote, we share our journey toward making sign language technologies a core part of Microsoft’s accessibility efforts—particularly in enhancing communication experiences for Deaf and sign language users in Microsoft Teams. We highlight the transformative role of synthetic data in overcoming the scarcity of annotated sign language datasets, enabling scalable, inclusive, and diverse training resources. By leveraging time-synchronized multi-view capture, precise registration, and rendering pipelines, we generate richly labeled synthetic data across varied identities and environments. We advocate for community-driven multi-view data collection and emphasize that zero-shot evaluation—without fine-tuning—is the true benchmark for real-world deployment. This talk outlines our key learnings and invites collaboration to advance sign language technology for all.",
+        link: "https://scholar.google.com/citations?hl=it&user=vZrN9OgAAAAJ" 
+    },
     { name: "Dr. Ehsan Hoque", affiliation: "University of Rochester, USA", imgSrc: Dr_Ehsan, bio: "Ehsan Hoque (Ph.D. MIT, 2013) is a tenured Professor (on-leave) of Computer Science at the University of Rochester and co-leads the Rochester Human-Computer Interaction (ROC HCI) Lab. Hoque’s research focuses on AI-driven health technologies, human-centered computing, and leveraging AI to improve socioemotional skills and healthcare interactions.", link: "https://scholar.google.com/citations?hl=it&user=ZJrR0KQAAAAJ" },
 ];
 
