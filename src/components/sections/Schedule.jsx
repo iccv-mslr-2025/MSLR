@@ -15,8 +15,8 @@ const deadlinesData = {
     challenge: [
         { date: "May 12, 2025", event: "Release of training and development sets", icon: Rocket },
         { date: "June 2, 2025", event: "Release of test sets", icon: TestTube2 },
-        { date: "June 16, 2025", event: "Challenge submission deadline", icon: Paperclip },
-        { date: "June 19, 2025", event: "Announcement of results", icon: Award },
+        { date: "June 23, 2025", event: "Challenge submission deadline", icon: Paperclip },
+        { date: "June 24, 2025", event: "Announcement of results", icon: Award },
         { date: "July 3, 2025", event: "Paper submission deadline", icon: ListChecks },
     ]
 };
